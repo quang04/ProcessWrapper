@@ -1,2 +1,2 @@
 # ProcessWrapper
-The build in process wrapper like System.Diagnostics.Process in C# 
+The build in process wrapper in C++ like System.Diagnostics.Process in C# 
