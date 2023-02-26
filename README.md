@@ -17,7 +17,7 @@ Create 3 pipes, one pipe for stdout, one pipe for stderror and one pipe for stdi
 All the examples in main.cpp
 
 # How to run code
-Visual studio 2019(v142), C++20, Window SDK 10.0 or above
+Visual studio 2019(v142), x64, C++20, Window SDK 10.0 or above
 
 # Constraints
 When write to stdin pipe, then read to stdout pipe immediately after that, there will be no available data in pipe, so need sleep about 40ms(may vary) to make sure data available in pipe. Any better solution will be appreciated
