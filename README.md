@@ -3,7 +3,7 @@ ProcessWrapper
 The build in process wrapper in C++ like System.Diagnostics.Process in C# 
 
 # Introduction
-In c++ win32, in order to create process like cmd process, python process,... requires a lot of efforts
+In c++ win32, redirect output, error from child process requires a lot of efforts
 
 So i create the process wrapper in order to create, calling, redirect output from child process in easy way
 
