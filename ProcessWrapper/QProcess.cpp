@@ -122,7 +122,8 @@ void QProcess::AsyncRead()
 		m_hStdErrRead() == INVALID_HANDLE_VALUE) return;
 
 	//Check function empty or not
-	if (!m_funcDataOut && !m_funcErrorOut) return;
+	if (m_funcDataOut == nullptr &&
+	    m_funcErrorOut == nullptr) return;
 
 	m_threadStdOut = std::thread([this]() {
 
@@ -196,7 +197,7 @@ int QProcess::Read()
 			}
 
 			//Call back
-			if(m_funcDataOut)//Check empty
+			if(m_funcDataOut != nullptr)
 				m_funcDataOut(buffer.get(), static_cast<size_t>(dwDataSize));
 		}
 
@@ -232,7 +233,7 @@ int QProcess::Read()
 			}
 
 			//Call back
-			if(m_funcErrorOut)//check empty
+			if(m_funcErrorOut != nullptr)
 				m_funcErrorOut(buffer.get(), static_cast<size_t>(dwDataSize));
 		}
 	}
