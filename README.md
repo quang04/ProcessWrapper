@@ -20,4 +20,4 @@ All the examples in main.cpp
 Visual studio 2019(v142), C++20, Window SDK 10.0 or above
 
 # Constraints
-When write to stdin pipe, then read stdout pipe immediately after that, there will be no available data in pipe, so need sleep about 40ms(may vary) to make sure data available in pipe. Any better solution will be appreciated
+When write to stdin pipe, then read to stdout pipe immediately after that, there will be no available data in pipe, so need sleep about 40ms(may vary) to make sure data available in pipe. Any better solution will be appreciated
