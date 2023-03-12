@@ -73,6 +73,11 @@ bool QProcess::CreateChildProcess(HANDLE hStdOut, HANDLE hStdIn, HANDLE hStdErr)
 	if (m_bIsCreateNoWindow)
 		creationFlags |= CREATE_NO_WINDOW;
 
+#ifdef UNICODE
+	creationFlags |= CREATE_UNICODE_ENVIRONMENT;
+#endif
+
+
 	if (!CreateProcess(nullptr,
 		m_strFileName.data(),
 		nullptr,
