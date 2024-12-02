@@ -1,6 +1,3 @@
-# ProcessWrapper
-The build in process wrapper in C++ like System.Diagnostics.Process in C# 
-
 # Introduction
 In c++ win32, redirect output, error from child process requires a lot of efforts
 (of course we can use heavy lib like boost or CLR to call C# process)
